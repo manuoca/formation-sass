@@ -9,34 +9,4 @@
 .box {
     width: 100px;
     height: 100px;
-
-    &:nth-child(odd) {
-        border-radius: 50%;
-    }
-
-    &-red {
-        background: red;
-    }
-
-    &-blue {
-        background: blue;
-    }
-
-    &-orange {
-        background: orange;
-    }
-
-    &-yellow {
-        background: yellow;
-    }
-
-    &-black {
-        background: black;
-    }
-
-    &-green {
-        border-right: 60px solid transparent;
-        border-left: 60px solid transparent;
-        border-bottom: 100px solid green;
-    }
 }

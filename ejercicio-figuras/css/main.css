@@ -15,34 +15,4 @@
   width: 100px;
   height: 100px;
 }
-
-.box:nth-child(odd) {
-  border-radius: 50%;
-}
-
-.box-red {
-  background: red;
-}
-
-.box-blue {
-  background: blue;
-}
-
-.box-orange {
-  background: orange;
-}
-
-.box-yellow {
-  background: yellow;
-}
-
-.box-black {
-  background: black;
-}
-
-.box-green {
-  border-right: 60px solid transparent;
-  border-left: 60px solid transparent;
-  border-bottom: 100px solid green;
-}
 /*# sourceMappingURL=main.css.map */
