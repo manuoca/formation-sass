@@ -1,0 +1,34 @@
+p {
+  font-weight: 600;
+  font-size: 3rem;
+}
+p a {
+  color: blue;
+}
+p a:hover {
+  color: red;
+}
+.footer p a {
+  color: orange;
+}
+.footer p a:hover {
+  color: green;
+}
+p.segundo {
+  font-size: small;
+}
+
+div {
+  padding: 100px;
+  background-color: pink;
+}
+
+.parrafo {
+  color: blue;
+}
+
+.text {
+  color: blue;
+}
+
+/*# sourceMappingURL=main.css.map */
