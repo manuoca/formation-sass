@@ -1,0 +1,12 @@
+p {
+  color: #5b2a2a;
+}
+
+.alert:hover, div {
+  font-weight: bold;
+}
+
+div:hover {
+  color: red;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,29 @@
+@function altenarBrillo($col){
+    @debug ($col);
+    @debug lightness($col);
+
+    @if (lightness($col) < 50 ) {
+        $col: lighten($col, 25%);
+    } @else {
+        $col: darken($col, 25%);
+    }
+
+    @debug lightness($col);
+    @return $col;
+}
+
+p {
+    color: altenarBrillo(hsl(0, 37%, 51%))
+}
+
+.alert:hover, %strong-alert {
+    font-weight: bold;
+}
+
+%strong-alert:hover {
+    color: red;
+}
+
+div {
+    @extend %strong-alert;
+}
