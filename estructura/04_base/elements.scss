@@ -1,0 +1,11 @@
+@use "../01_settings" as s;
+
+a {
+  font-weight: bold;
+  color: s.$color-secondary;
+}
+
+h1 {
+  color: s.$color-primary;
+  font-size: s.$font-size-base;
+}

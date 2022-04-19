@@ -1,0 +1,44 @@
+p {
+    font-weight: 600;
+    font-size: 3rem;
+
+    a {
+        color: blue;
+
+        &:hover {
+            color: red;
+        }
+
+        .footer & {
+            color: orange;
+
+            &:hover {
+                color: green;
+            }
+        }
+    }
+
+    &.segundo {
+        font-size: small;
+    }
+}
+
+d {
+    &i {
+        &v {
+            padding: 100px;
+            background-color: pink;
+        }
+    }
+}
+
+$variable: red;
+
+.parrafo {
+  $variable: blue !global;
+  color: $variable;
+}
+
+.text {
+  color: $variable;
+}
