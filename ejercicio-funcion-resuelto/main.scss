@@ -13,17 +13,5 @@
 }
 
 p {
-    color: altenarBrillo(hsl(0, 37%, 51%))
-}
-
-.alert:hover, %strong-alert {
-    font-weight: bold;
-}
-
-%strong-alert:hover {
-    color: red;
-}
-
-div {
-    @extend %strong-alert;
+    color: altenarBrillo(hsl(0, 37%, 45%))
 }
