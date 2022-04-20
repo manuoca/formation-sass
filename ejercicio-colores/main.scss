@@ -1,0 +1,33 @@
+html {
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+      flex: 1 0 100%;
+      margin: 3rem 0 0 0;
+    }
+
+    p {
+      flex: 1 0 100%;
+      margin: 1rem 0;
+    }
+
+    article {
+      flex: 1;
+      padding: 1rem;
+
+      p {
+        display: flex;
+        justify-content: space-between;
+        label {
+          font-weight: bold;
+        }
+      }
+    }
+  }
