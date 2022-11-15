@@ -1,5 +1,5 @@
-@use "../01_settings" as sc;
+@use "../01_settings" as s;
 
 body {
-    background-color: sc.$main-bg-color;
+    background-color: s.$main-bg-color;
 }

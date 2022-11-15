@@ -12,7 +12,7 @@
   color: s.$color-primary;
   border: 1px solid s.$color-primary;
   cursor: pointer;
-  @extend %ellipsis;
+  @include t.conEllipsis;
 }
 
 .c-btn:hover {

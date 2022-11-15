@@ -1,42 +1,45 @@
 .container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-.box {
-    width: 100px;
-    height: 100px;
+  &__box {
+    width: 6rem;
+    height: 6rem;
 
-    &:nth-child(odd) {
-        border-radius: 50%;
+    &:first-child,
+    &:last-child  {
+      border: 0.3rem solid black;
     }
 
-    &-red {
-        background: red;
+    &:nth-child(even) {
+      border-radius: 50%;
     }
 
-    &-blue {
-        background: blue;
+    &--red {
+      background: red;
     }
 
-    &-orange {
-        background: orange;
+    &--blue {
+      background: blue;
     }
 
-    &-yellow {
-        background: yellow;
+    &--orange {
+      background: orange;
     }
 
-    &-black {
-        background: black;
+    &--yellow {
+      background: yellow;
     }
 
-    &-green {
-        border-right: 60px solid transparent;
-        border-left: 60px solid transparent;
-        border-bottom: 100px solid green;
+    &--black {
+      background: black;
     }
+
+    &--green {
+      background: green;
+    }
+  }
 }

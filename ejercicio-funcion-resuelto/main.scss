@@ -1,17 +1,20 @@
-@function altenarBrillo($col){
-    @debug ($col);
-    @debug lightness($col);
+@function altenarBrillo($col) {
+    @debug (
+      #{round(hue($col))} / #{round(saturation($col))} / #{round(lightness($col))}
+    );
 
-    @if (lightness($col) < 50 ) {
-        $col: lighten($col, 25%);
+    @if (lightness($col) < 50) {
+      $col: lighten($col, 25%);
     } @else {
-        $col: darken($col, 25%);
+      $col: darken($col, 25%);
     }
 
-    @debug lightness($col);
+    @debug (
+      #{round(hue($col))} / #{round(saturation($col))} / #{round(lightness($col))}
+    );
     @return $col;
-}
+  }
 
 p {
-    color: altenarBrillo(hsl(0, 37%, 45%))
+    color: altenarBrillo(hsl(0, 48%, 45%))
 }
