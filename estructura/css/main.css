@@ -20,8 +20,12 @@ h1 {
   font-size: 16;
 }
 
-.c-btn {
+button {
   display: inline-block;
+  cursor: pointer;
+}
+
+.c-btn {
   padding: 1em 1.5em 1em;
   font-size: 0.8rem;
   font-weight: 700;
@@ -30,7 +34,6 @@ h1 {
   letter-spacing: 0.1em;
   color: #0047b6;
   border: 1px solid #0047b6;
-  cursor: pointer;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

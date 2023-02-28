@@ -9,3 +9,8 @@ h1 {
   color: s.$color-primary;
   font-size: s.$font-size-base;
 }
+
+button {
+  display: inline-block;
+  cursor: pointer;
+}

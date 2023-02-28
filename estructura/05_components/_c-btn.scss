@@ -2,7 +2,6 @@
 @use "../02_tools" as t;
 
 .c-btn {
-  display: inline-block;
   padding: 1em 1.5em 1em;
   font-size: 0.8rem;
   font-weight: 700;
@@ -11,7 +10,6 @@
   letter-spacing: 0.1em;
   color: s.$color-primary;
   border: 1px solid s.$color-primary;
-  cursor: pointer;
   @include t.conEllipsis;
 }
 
