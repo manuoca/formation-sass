@@ -1,10 +1,10 @@
 // Variables /////////////////////
 
 $catalogo-colores: (
-    #4682b4,  // steelblue 4682b4
-    #ff69b4,  // hotpink ff69b4
-    #daa520,  // goldenrod daa520
-    #228b22   // forestgreen 228b22
+  1 "steelblue" #4682b4,  // steelblue 4682b4
+  2 "hotpink" #ff69b4,  // hotpink ff69b4
+  3 "goldenrod" #daa520,  // goldenrod daa520
+  4 "forestgreen" #228b22   // forestgreen 228b22
 );
 
 $max-width: 1200px;
@@ -54,22 +54,20 @@ section {
   }
 }
 
-@for $i from 1 through length($catalogo-colores) {
-  $col: nth($catalogo-colores, $i);
-  $col-name: "#{invert(invert($col))}";
-  $col-hex: "#{$col}";
-  $col-rgb: "#{red($col)} / #{green($col)} / #{blue($col)}";
-  $col-hsl: "#{round(hue($col))} / #{round(saturation($col))} / #{round(lightness($col))}";
+@each $colorId, $colorName, $colorValue in $catalogo-colores {
+  $col-hex: "#{$colorValue}";
+  $col-rgb: "#{red($colorValue)} / #{green($colorValue)} / #{blue($colorValue)}";
+  $col-hsl: "#{round(hue($colorValue))} / #{round(saturation($colorValue))} / #{round(lightness($colorValue))}";
 
-  .color-principal-#{$i} {
+  .color-principal-#{$colorId} {
     .muestra {
-      background-color: $col;
+      background-color: $colorValue;
       height: $h-muestra;
     }
 
     .datos {
       .nombre::before {
-        content: "#{$col-name}";
+        content: "#{$colorName}";
       }
       .hex::before {
         content:  $col-hex;
@@ -83,9 +81,9 @@ section {
     }
   }
 
-  .tonalidades-color-principal-#{$i} {
+  .tonalidades-color-principal-#{$colorId} {
     h3:before {
-      content: $col-name;
+      content: $colorName;
     }
     .muestra {
       display: flex;
@@ -96,39 +94,37 @@ section {
       }
 
       .claro {
-        background-color: lighten($col, $tonalidad);
+        background-color: lighten($colorValue, $tonalidad);
       }
       .normal {
-        background-color: $col;
+        background-color: $colorValue;
       }
       .oscuro {
-        background-color: darken($col, $tonalidad);
+        background-color: darken($colorValue, $tonalidad);
       }
     }
   }
 
-  .combinaciones-color-principal-#{$i} {
+  .combinaciones-color-principal-#{$colorId} {
     h3:before {
-      content: $col-name;
+      content: $colorName;
     }
     .muestra {
-      background-color: $col;
+      background-color: $colorValue;
       height: $h-muestra;
     }
 
-    @for $m from 1 through length($catalogo-colores) {
-      @if $i != $m {
-        $col-mix: nth($catalogo-colores, $m);
-        $col-name-mix: "#{invert(invert($col-mix))}";
+    @each $colorIdMix, $colorNameMix, $colorValueMix in $catalogo-colores {
+      @if $colorName != $colorNameMix {
 
-        .mix-#{$m} {
+        .mix-#{$colorIdMix} {
           p:before {
-            content: $col-name + " con " + $col-name-mix;
+            content: $colorName + " con " + $colorNameMix;
           }
 
           div {
               @extend %muestra-mitad;
-              background-color: mix($col, $col-mix, 60%);
+              background-color: mix($colorValue, $colorValueMix, 60%);
           }
         }
       }
