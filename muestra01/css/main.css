@@ -1,26 +1,22 @@
-p {
-  font-weight: 600;
-  font-size: 3rem;
-}
-p a {
-  color: blue;
-}
-p a:hover {
-  color: red;
-}
-.footer p a {
-  color: orange;
-}
-.footer p a:hover {
-  color: green;
-}
-p.segundo {
-  font-size: small;
+.error, .error--serious {
+  background-color: red;
 }
 
-div {
-  padding: 100px;
-  background-color: pink;
+.error--serious {
+  border-width: 3px;
+}
+
+p {
+  font-size: 6rem;
+}
+p a {
+  color: red;
+}
+p a:hover {
+  font-weight: bold;
+}
+section p a {
+  color: green;
 }
 
 .parrafo {

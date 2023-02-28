@@ -1,36 +1,17 @@
 p {
-    font-weight: 600;
-    font-size: 3rem;
-
-    a {
-        color: blue;
-
-        &:hover {
-            color: red;
-        }
-
-        .footer & {
-            color: orange;
-
-            &:hover {
-                color: green;
-            }
-        }
+    font-size: 6rem;
+  a {
+    color: red;
+    &:hover {
+        font-weight: bold;
     }
-
-    &.segundo {
-        font-size: small;
+    section & {
+      color: green;
     }
+  }
 }
 
-d {
-    &i {
-        &v {
-            padding: 100px;
-            background-color: pink;
-        }
-    }
-}
+
 
 $variable: red;
 
