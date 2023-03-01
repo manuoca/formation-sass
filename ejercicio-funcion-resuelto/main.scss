@@ -1,4 +1,4 @@
-@function altenarBrillo($col) {
+@function alterarBrillo($col) {
     @debug (
       #{round(hue($col))} / #{round(saturation($col))} / #{round(lightness($col))}
     );
@@ -16,5 +16,5 @@
   }
 
 p {
-    color: altenarBrillo(hsl(0, 48%, 45%))
+    color: alterarBrillo(hsl(0, 48%, 45%))
 }
